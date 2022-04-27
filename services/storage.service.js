@@ -35,6 +35,8 @@ const filePath = join(homedir(), "weather-data.json");
 //   //   return storage.set(data);
 // };
 
+export const TOKEN_DICTIONARY = { token: "token", city: "city" };
+
 export const saveKeyValue = async (key, value) => {
   let data = {};
 

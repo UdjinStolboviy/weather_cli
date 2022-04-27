@@ -19,3 +19,16 @@ export const printHelp = () => {
       `
   );
 };
+
+export const printWeather = (weather, icon) => {
+  console.log(
+    dedent`${chalk.bgBlue("WEATHER")}
+        weather city 
+        ${chalk.blue(weather.name)}
+        ${chalk.bgRedBright(`${icon} ${weather.weather[0].description}`)}
+        temp: ${chalk.bgGreenBright(weather.main.temp)} (feels like: ${chalk.bgCyanBright(weather.main.feels_like)})
+        humidity: ${chalk.bgYellow(weather.main.humidity)} %
+        speed wind: ${chalk.magenta(weather.wind.speed)} m/s
+      `
+  );
+}
